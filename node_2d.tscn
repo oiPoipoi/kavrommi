@@ -1,10 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://trmyfflmvj7m"]
+[gd_scene format=3 uid="uid://trmyfflmvj7m"]
 
-[ext_resource type="Texture2D" uid="uid://dncd582f34ehu" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://dhatyfpdc8mwm" path="res://player.tscn" id="1_wtcfe"]
+[ext_resource type="Texture2D" uid="uid://dncd582f34ehu" path="res://icon.svg" id="2_0e48y"]
 
-[node name="Node2D" type="Node2D"]
+[node name="Node2D" type="Node2D" unique_id=149384163]
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(130.5, 495.5)
-scale = Vector2(0.6328125, 0.6328125)
-texture = ExtResource("1_wtcfe")
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1164025422]
+position = Vector2(937, 273)
+texture = ExtResource("2_0e48y")
+
+[node name="player" parent="." unique_id=1519398841 instance=ExtResource("1_wtcfe")]
+position = Vector2(538, 393)
+max_speed = 1000.0
+friction = 1000.0
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1031479394]
