@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c5bbpqafuyy08"]
+
+[ext_resource type="Texture2D" uid="uid://bkbdlgf4hm0xq" path="res://track.png" id="1_bcvet"]
+[ext_resource type="PackedScene" uid="uid://dhatyfpdc8mwm" path="res://player.tscn" id="2_8nfsw"]
+[ext_resource type="PackedScene" uid="uid://c6b5elx16tgah" path="res://box.tscn" id="3_vr403"]
+
+[node name="Track" type="Node2D" unique_id=667905707]
+
+[node name="Track" type="Sprite2D" parent="." unique_id=2101594216]
+position = Vector2(765.0001, -152.00006)
+scale = Vector2(8.193358, 3.994956)
+texture = ExtResource("1_bcvet")
+
+[node name="player" parent="." unique_id=1519398841 instance=ExtResource("2_8nfsw")]
+position = Vector2(511, 451)
+
+[node name="RigidBody2D" parent="." unique_id=82936517 instance=ExtResource("3_vr403")]
+position = Vector2(1023, 348)
+rotation = 0.71487916
+
+[node name="RigidBody2D2" parent="." unique_id=43338752 instance=ExtResource("3_vr403")]
+position = Vector2(1036, 485)
+rotation = 0.71487916
+
+[node name="RigidBody2D3" parent="." unique_id=1937181499 instance=ExtResource("3_vr403")]
+position = Vector2(1787, -111.000046)
+rotation = 0.65958333
+
+[node name="RigidBody2D4" parent="." unique_id=2075863395 instance=ExtResource("3_vr403")]
+position = Vector2(2067, 5.999939)
+rotation = 0.35123578

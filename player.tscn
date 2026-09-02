@@ -9,6 +9,9 @@ size = Vector2(58, 57)
 [node name="player" type="CharacterBody2D" unique_id=1519398841]
 motion_mode = 1
 script = ExtResource("1_onrkg")
+max_speed = 1000.0
+friction = 1000.0
+push_force = 100.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1706076125]
 position = Vector2(8, -11.5)
@@ -18,3 +21,7 @@ shape = SubResource("RectangleShape2D_iqkd1")
 position = Vector2(15.500001, -15.500001)
 scale = Vector2(1.234375, 1.234375)
 texture = ExtResource("2_onrkg")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1781407200]
+position = Vector2(8, -11)
+position_smoothing_enabled = true
