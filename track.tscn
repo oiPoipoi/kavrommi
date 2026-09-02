@@ -4,6 +4,22 @@
 [ext_resource type="PackedScene" uid="uid://dhatyfpdc8mwm" path="res://player.tscn" id="2_8nfsw"]
 [ext_resource type="PackedScene" uid="uid://c6b5elx16tgah" path="res://box.tscn" id="3_vr403"]
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ejki1"]
+a = Vector2(-1332, -1175)
+b = Vector2(-1332, 870)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_iqkd1"]
+a = Vector2(-1332, -1174)
+b = Vector2(2863, -1174)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_eeo6d"]
+a = Vector2(2863, 871)
+b = Vector2(2862, -1174)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jphpq"]
+a = Vector2(2863, 871)
+b = Vector2(-1333, 870)
+
 [node name="Track" type="Node2D" unique_id=667905707]
 
 [node name="Track" type="Sprite2D" parent="." unique_id=2101594216]
@@ -29,3 +45,17 @@ rotation = 0.65958333
 [node name="RigidBody2D4" parent="." unique_id=2075863395 instance=ExtResource("3_vr403")]
 position = Vector2(2067, 5.999939)
 rotation = 0.35123578
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1636970657]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2023415048]
+shape = SubResource("SegmentShape2D_ejki1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=2126532892]
+shape = SubResource("SegmentShape2D_iqkd1")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=91706378]
+shape = SubResource("SegmentShape2D_eeo6d")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1692668091]
+shape = SubResource("SegmentShape2D_jphpq")
