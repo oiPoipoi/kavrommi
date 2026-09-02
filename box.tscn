@@ -6,8 +6,8 @@
 size = Vector2(128, 47)
 
 [node name="RigidBody2D" type="RigidBody2D" unique_id=82936517]
-mass = 10.0
 gravity_scale = 0.0
+linear_damp = 1.0
 
 [node name="Icon" type="Sprite2D" parent="." unique_id=725804773]
 position = Vector2(2.9444696e-05, 6.097555e-05)
