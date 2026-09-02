@@ -2,10 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dhatyfpdc8mwm" path="res://player.tscn" id="1_wtcfe"]
 [ext_resource type="Texture2D" uid="uid://dncd582f34ehu" path="res://icon.svg" id="2_0e48y"]
-[ext_resource type="Script" uid="uid://b0ahj5b5wn1sb" path="res://rigid_body_2d.gd" id="3_epypp"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejki1"]
-size = Vector2(71, 72)
+[ext_resource type="PackedScene" uid="uid://c6b5elx16tgah" path="res://box.tscn" id="3_epypp"]
 
 [node name="Node2D" type="Node2D" unique_id=149384163]
 
@@ -17,19 +14,14 @@ texture = ExtResource("2_0e48y")
 position = Vector2(538, 393)
 max_speed = 1000.0
 friction = 1000.0
+push_force = 50.0
 
 [node name="Camera2D" type="Camera2D" parent="player" unique_id=1031479394]
 position_smoothing_enabled = true
-position_smoothing_speed = 0.5
 
-[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1093697280]
-script = ExtResource("3_epypp")
+[node name="RigidBody2D" parent="." unique_id=82936517 instance=ExtResource("3_epypp")]
+position = Vector2(271, 564)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=895845081]
-position = Vector2(693.5, 565)
-shape = SubResource("RectangleShape2D_ejki1")
-
-[node name="Icon" type="Sprite2D" parent="RigidBody2D" unique_id=788158156]
-position = Vector2(694, 565)
-scale = Vector2(0.5624999, 0.5624999)
+[node name="Icon" type="Sprite2D" parent="." unique_id=1154497098]
+position = Vector2(238, 799)
 texture = ExtResource("2_0e48y")
