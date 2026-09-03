@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dhatyfpdc8mwm" path="res://Scenes/player.tscn" id="2_xoefw"]
 [ext_resource type="PackedScene" uid="uid://c6b5elx16tgah" path="res://Scenes/box.tscn" id="3_bcua6"]
 [ext_resource type="Script" uid="uid://dc0lut08hjivk" path="res://Scripts/win_test.gd" id="4_l5ksx"]
+[ext_resource type="Texture2D" uid="uid://ci8kwkovecbnx" path="res://Art/checkpoint.png" id="5_xoefw"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ejki1"]
 a = Vector2(-1332, -1175)
@@ -116,6 +117,11 @@ collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D4" unique_id=2071262250]
 shape = SubResource("SegmentShape2D_y0wkg")
+
+[node name="Checkpoint" type="Sprite2D" parent="Win Test/Area2D4" unique_id=1033657120]
+position = Vector2(728.00006, 452.75)
+scale = Vector2(9.500002, 13.328124)
+texture = ExtResource("5_xoefw")
 
 [connection signal="body_entered" from="Win Test/Area2D" to="Win Test" method="_on_area_2d_body_entered_2"]
 [connection signal="body_entered" from="Win Test/Area2D" to="Win Test" method="_on_area_2d_body_entered"]
