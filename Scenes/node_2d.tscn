@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://trmyfflmvj7m"]
+
+[ext_resource type="Texture2D" uid="uid://dncd582f34ehu" path="res://Art/icon.svg" id="1_hh5uf"]
+[ext_resource type="PackedScene" uid="uid://dhatyfpdc8mwm" path="res://Scenes/player.tscn" id="2_6whob"]
+[ext_resource type="PackedScene" uid="uid://c6b5elx16tgah" path="res://Scenes/box.tscn" id="3_u7krg"]
+
+[node name="Node2D" type="Node2D" unique_id=149384163]
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1164025422]
+position = Vector2(937, 273)
+texture = ExtResource("1_hh5uf")
+
+[node name="player" parent="." unique_id=1519398841 instance=ExtResource("2_6whob")]
+position = Vector2(538, 393)
+
+[node name="RigidBody2D" parent="." unique_id=82936517 instance=ExtResource("3_u7krg")]
+position = Vector2(271, 564)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1154497098]
+position = Vector2(238, 799)
+texture = ExtResource("1_hh5uf")
