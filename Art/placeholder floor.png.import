@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ct8o4u80sijib"
-path="res://.godot/imported/untitled.png-6aa3d953fdcfa501bf543bac37b75636.ctex"
+uid="uid://dsmbl28ovb5jh"
+path="res://.godot/imported/placeholder floor.png-c4b83efa01029cf11c24a23b44ce7d57.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://untitled.png"
-dest_files=["res://.godot/imported/untitled.png-6aa3d953fdcfa501bf543bac37b75636.ctex"]
+source_file="res://Art/placeholder floor.png"
+dest_files=["res://.godot/imported/placeholder floor.png-c4b83efa01029cf11c24a23b44ce7d57.ctex"]
 
 [params]
 
