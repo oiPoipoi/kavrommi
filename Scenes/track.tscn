@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bkbdlgf4hm0xq" path="res://Art/track.png" id="1_l5ksx"]
 [ext_resource type="PackedScene" uid="uid://dhatyfpdc8mwm" path="res://Scenes/player.tscn" id="2_xoefw"]
 [ext_resource type="PackedScene" uid="uid://c6b5elx16tgah" path="res://Scenes/box.tscn" id="3_bcua6"]
-[ext_resource type="PackedScene" uid="uid://svs1dfihrica" path="res://Scenes/Win.tscn" id="4_nrliu"]
+[ext_resource type="Script" uid="uid://dc0lut08hjivk" path="res://Scripts/win_test.gd" id="4_l5ksx"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ejki1"]
 a = Vector2(-1332, -1175)
@@ -21,8 +21,21 @@ b = Vector2(2862, -1174)
 a = Vector2(2863, 871)
 b = Vector2(-1333, 870)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_7a2mg"]
-size = Vector2(29, 447)
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_sbur7"]
+a = Vector2(725, 858)
+b = Vector2(728, 140)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4op3a"]
+a = Vector2(2860, -134)
+b = Vector2(1379, -134)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0177n"]
+a = Vector2(728, -457)
+b = Vector2(718, -1213)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_y0wkg"]
+a = Vector2(-85, -185)
+b = Vector2(-1506, -201)
 
 [node name="Track" type="Node2D" unique_id=667905707]
 
@@ -40,22 +53,7 @@ texture = ExtResource("1_l5ksx")
 
 [node name="player" parent="." unique_id=1519398841 instance=ExtResource("2_xoefw")]
 position = Vector2(511, 451)
-
-[node name="RigidBody2D" parent="." unique_id=82936517 instance=ExtResource("3_bcua6")]
-position = Vector2(1023, 348)
-rotation = 0.71487916
-
-[node name="RigidBody2D2" parent="." unique_id=43338752 instance=ExtResource("3_bcua6")]
-position = Vector2(1036, 485)
-rotation = 0.71487916
-
-[node name="RigidBody2D3" parent="." unique_id=1937181499 instance=ExtResource("3_bcua6")]
-position = Vector2(1787, -111.000046)
-rotation = 0.65958333
-
-[node name="RigidBody2D4" parent="." unique_id=2075863395 instance=ExtResource("3_bcua6")]
-position = Vector2(2067, 5.999939)
-rotation = 0.35123578
+collision_layer = 3
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1636970657]
 
@@ -71,15 +69,57 @@ shape = SubResource("SegmentShape2D_eeo6d")
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1692668091]
 shape = SubResource("SegmentShape2D_jphpq")
 
-[node name="Area2D" parent="." unique_id=366367955 instance=ExtResource("4_nrliu")]
-position = Vector2(623, 446)
+[node name="Boxes" type="Node" parent="." unique_id=2092564208]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1640554554]
-position = Vector2(4.5, 3.5)
-shape = SubResource("RectangleShape2D_7a2mg")
+[node name="RigidBody2D" parent="Boxes" unique_id=82936517 instance=ExtResource("3_bcua6")]
+position = Vector2(1023, 348)
+rotation = 0.71487916
 
-[node name="ColorRect2" type="ColorRect" parent="Area2D" unique_id=1278676599]
-offset_left = -10.0
-offset_top = -220.0
-offset_right = 18.0
-offset_bottom = 228.0
+[node name="RigidBody2D2" parent="Boxes" unique_id=43338752 instance=ExtResource("3_bcua6")]
+position = Vector2(1036, 485)
+rotation = 0.71487916
+
+[node name="RigidBody2D3" parent="Boxes" unique_id=1937181499 instance=ExtResource("3_bcua6")]
+position = Vector2(1787, -111.000046)
+rotation = 0.65958333
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="RigidBody2D4" parent="Boxes" unique_id=2075863395 instance=ExtResource("3_bcua6")]
+position = Vector2(2067, 5.999939)
+rotation = 0.35123578
+
+[node name="Win Test" type="Node" parent="." unique_id=603902113]
+script = ExtResource("4_l5ksx")
+
+[node name="Area2D" type="Area2D" parent="Win Test" unique_id=1015064085]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D" unique_id=1961551999]
+shape = SubResource("SegmentShape2D_sbur7")
+
+[node name="Area2D2" type="Area2D" parent="Win Test" unique_id=1550372515]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D2" unique_id=725097533]
+shape = SubResource("SegmentShape2D_4op3a")
+
+[node name="Area2D3" type="Area2D" parent="Win Test" unique_id=491245794]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D3" unique_id=679354621]
+shape = SubResource("SegmentShape2D_0177n")
+
+[node name="Area2D4" type="Area2D" parent="Win Test" unique_id=195353625]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D4" unique_id=2071262250]
+shape = SubResource("SegmentShape2D_y0wkg")
+
+[connection signal="body_entered" from="Win Test/Area2D" to="Win Test" method="_on_area_2d_body_entered_2"]
+[connection signal="body_entered" from="Win Test/Area2D" to="Win Test" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Win Test/Area2D" to="Win Test" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Win Test/Area2D2" to="Win Test" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Win Test/Area2D3" to="Win Test" method="_on_area_2d_3_body_entered"]
+[connection signal="body_entered" from="Win Test/Area2D4" to="Win Test" method="_on_area_2d_4_body_entered"]

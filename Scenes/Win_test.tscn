@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://pc67rm3f63ai" path="res://Scripts/area_2d.gd" id="1_8sw8u"]
 
-[node name="Area2D" type="Area2D" unique_id=366367955]
+[node name="Win Test" type="Area2D" unique_id=366367955]
 script = ExtResource("1_8sw8u")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

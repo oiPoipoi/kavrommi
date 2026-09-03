@@ -5,7 +5,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ejki1"]
 size = Vector2(128, 47)
 
-[node name="RigidBody2D" type="RigidBody2D" unique_id=82936517]
+[node name="Box" type="RigidBody2D" unique_id=82936517]
 gravity_scale = 0.0
 linear_damp = 1.0
 
