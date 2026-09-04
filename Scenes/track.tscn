@@ -6,22 +6,6 @@
 [ext_resource type="Script" uid="uid://dc0lut08hjivk" path="res://Scripts/win_test.gd" id="4_l5ksx"]
 [ext_resource type="Texture2D" uid="uid://ci8kwkovecbnx" path="res://Art/checkpoint.png" id="5_xoefw"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_ejki1"]
-a = Vector2(-1332, -1175)
-b = Vector2(-1332, 870)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_iqkd1"]
-a = Vector2(-1332, -1174)
-b = Vector2(2863, -1174)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_eeo6d"]
-a = Vector2(2863, 871)
-b = Vector2(2862, -1174)
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_jphpq"]
-a = Vector2(2863, 871)
-b = Vector2(-1333, 870)
-
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_sbur7"]
 a = Vector2(725, 858)
 b = Vector2(728, 140)
@@ -38,7 +22,57 @@ b = Vector2(718, -1213)
 a = Vector2(-85, -185)
 b = Vector2(-1506, -201)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ejki1"]
+a = Vector2(-1332, -1175)
+b = Vector2(-1332, 870)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_iqkd1"]
+a = Vector2(-1332, -1174)
+b = Vector2(2863, -1174)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_eeo6d"]
+a = Vector2(2863, 871)
+b = Vector2(2862, -1174)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jphpq"]
+a = Vector2(2863, 871)
+b = Vector2(-1333, 870)
+
 [node name="Track" type="Node2D" unique_id=667905707]
+
+[node name="Win Test" type="Node" parent="." unique_id=603902113]
+script = ExtResource("4_l5ksx")
+
+[node name="Checkpoint" type="Sprite2D" parent="Win Test" unique_id=1033657120]
+position = Vector2(728.00006, 452.75)
+scale = Vector2(9.500002, 13.328124)
+texture = ExtResource("5_xoefw")
+
+[node name="Area2D" type="Area2D" parent="Win Test" unique_id=1015064085]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D" unique_id=1961551999]
+shape = SubResource("SegmentShape2D_sbur7")
+
+[node name="Area2D2" type="Area2D" parent="Win Test" unique_id=1550372515]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D2" unique_id=725097533]
+shape = SubResource("SegmentShape2D_4op3a")
+
+[node name="Area2D3" type="Area2D" parent="Win Test" unique_id=491245794]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D3" unique_id=679354621]
+shape = SubResource("SegmentShape2D_0177n")
+
+[node name="Area2D4" type="Area2D" parent="Win Test" unique_id=195353625]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D4" unique_id=2071262250]
+shape = SubResource("SegmentShape2D_y0wkg")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=599342646]
 offset_left = -2260.0
@@ -89,42 +123,8 @@ scale = Vector2(0.99999994, 0.99999994)
 position = Vector2(2067, 5.999939)
 rotation = 0.35123578
 
-[node name="Win Test" type="Node" parent="." unique_id=603902113]
-script = ExtResource("4_l5ksx")
-
-[node name="Area2D" type="Area2D" parent="Win Test" unique_id=1015064085]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D" unique_id=1961551999]
-shape = SubResource("SegmentShape2D_sbur7")
-
-[node name="Area2D2" type="Area2D" parent="Win Test" unique_id=1550372515]
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D2" unique_id=725097533]
-shape = SubResource("SegmentShape2D_4op3a")
-
-[node name="Area2D3" type="Area2D" parent="Win Test" unique_id=491245794]
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D3" unique_id=679354621]
-shape = SubResource("SegmentShape2D_0177n")
-
-[node name="Area2D4" type="Area2D" parent="Win Test" unique_id=195353625]
-collision_layer = 0
-collision_mask = 2
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D4" unique_id=2071262250]
-shape = SubResource("SegmentShape2D_y0wkg")
-
-[node name="Checkpoint" type="Sprite2D" parent="Win Test/Area2D4" unique_id=1033657120]
-position = Vector2(728.00006, 452.75)
-scale = Vector2(9.500002, 13.328124)
-texture = ExtResource("5_xoefw")
-
-[connection signal="body_entered" from="Win Test/Area2D" to="Win Test" method="_on_area_2d_body_entered_2"]
 [connection signal="body_entered" from="Win Test/Area2D" to="Win Test" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Win Test/Area2D" to="Win Test" method="_on_area_2d_body_entered_2"]
 [connection signal="body_exited" from="Win Test/Area2D" to="Win Test" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Win Test/Area2D2" to="Win Test" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="Win Test/Area2D3" to="Win Test" method="_on_area_2d_3_body_entered"]
