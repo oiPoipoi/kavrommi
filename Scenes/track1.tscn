@@ -1,0 +1,233 @@
+[gd_scene format=3 uid="uid://cquqr0foequ0f"]
+
+[ext_resource type="Texture2D" uid="uid://bphgmap0gqv7q" path="res://Art/Track1.png" id="1_aahq8"]
+[ext_resource type="Script" uid="uid://d062qbfackj4r" path="res://Scripts/track1logic.gd" id="1_e4ks1"]
+[ext_resource type="PackedScene" uid="uid://dhatyfpdc8mwm" path="res://Scenes/player.tscn" id="2_8q000"]
+[ext_resource type="Texture2D" uid="uid://ci8kwkovecbnx" path="res://Art/checkpoint.png" id="2_l2glk"]
+[ext_resource type="PackedScene" uid="uid://ctpr5ticr61va" path="res://Scenes/grass.tscn" id="3_8q000"]
+[ext_resource type="PackedScene" uid="uid://c6b5elx16tgah" path="res://Scenes/box.tscn" id="4_ecvur"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8erxa"]
+a = Vector2(656, 77)
+b = Vector2(663, 401)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7dlqx"]
+a = Vector2(2615, 77)
+b = Vector2(2615, 404)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_1m7uj"]
+a = Vector2(3887, -386)
+b = Vector2(3890, 44)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_068dk"]
+a = Vector2(4398, 373)
+b = Vector2(5247, 356)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_e4os7"]
+a = Vector2(5323, 1453)
+b = Vector2(4670, 1160)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nls15"]
+a = Vector2(4484, 1667)
+b = Vector2(4508, 2316)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_lk3f1"]
+a = Vector2(4391, 1288)
+b = Vector2(4128, 1560)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_s6et1"]
+a = Vector2(2864, 1783)
+b = Vector2(2814, 2155)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_6eqy7"]
+a = Vector2(2647, 728)
+b = Vector2(2425, 904)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_x8wh0"]
+a = Vector2(1789, 1245)
+b = Vector2(1659, 932)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_5aoac"]
+a = Vector2(1000, 1255)
+b = Vector2(1290, 1149)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4d4fs"]
+a = Vector2(2016, 2073)
+b = Vector2(2861, 2450)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ofs71"]
+a = Vector2(1011, 2321)
+b = Vector2(809, 2569)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jcbkm"]
+a = Vector2(671, 1347)
+b = Vector2(400, 1430)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_7a2mg"]
+a = Vector2(2688, 2120)
+b = Vector2(2847, 2201)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_k0yrt"]
+a = Vector2(6149, -381)
+b = Vector2(-127, -381)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2r280"]
+a = Vector2(-127, -382)
+b = Vector2(-128, 2757)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4wgyl"]
+a = Vector2(6148, 2757)
+b = Vector2(-130, 2756)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_l33ue"]
+a = Vector2(6149, -381)
+b = Vector2(6148, 2758)
+
+[node name="Node2D" type="Node2D" unique_id=686301819]
+
+[node name="Win Logic" type="Node" parent="." unique_id=58911606]
+script = ExtResource("1_e4ks1")
+
+[node name="check1" type="Area2D" parent="Win Logic" unique_id=2049638901]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Logic/check1" unique_id=759700617]
+shape = SubResource("SegmentShape2D_8erxa")
+
+[node name="check2" type="Area2D" parent="Win Logic" unique_id=1205236669]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Logic/check2" unique_id=148582153]
+shape = SubResource("SegmentShape2D_7dlqx")
+
+[node name="check3" type="Area2D" parent="Win Logic" unique_id=1798704367]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Logic/check3" unique_id=408855166]
+shape = SubResource("SegmentShape2D_1m7uj")
+
+[node name="check4" type="Area2D" parent="Win Logic" unique_id=1582522961]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Logic/check4" unique_id=1929158365]
+shape = SubResource("SegmentShape2D_068dk")
+
+[node name="check5" type="Area2D" parent="Win Logic" unique_id=214199014]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Logic/check5" unique_id=1696323361]
+shape = SubResource("SegmentShape2D_e4os7")
+
+[node name="check6" type="Area2D" parent="Win Logic" unique_id=1719800637]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Logic/check6" unique_id=376041611]
+shape = SubResource("SegmentShape2D_nls15")
+
+[node name="check7" type="Area2D" parent="Win Logic" unique_id=2138631879]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Logic/check7" unique_id=443146266]
+shape = SubResource("SegmentShape2D_lk3f1")
+
+[node name="check8" type="Area2D" parent="Win Logic" unique_id=355808996]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Logic/check8" unique_id=792031767]
+shape = SubResource("SegmentShape2D_s6et1")
+
+[node name="check9" type="Area2D" parent="Win Logic" unique_id=2144683472]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Logic/check9" unique_id=576454772]
+shape = SubResource("SegmentShape2D_6eqy7")
+
+[node name="check10" type="Area2D" parent="Win Logic" unique_id=1433852724]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Logic/check10" unique_id=438361330]
+shape = SubResource("SegmentShape2D_x8wh0")
+
+[node name="check11" type="Area2D" parent="Win Logic" unique_id=1437666084]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Logic/check11" unique_id=248141628]
+shape = SubResource("SegmentShape2D_5aoac")
+
+[node name="check12" type="Area2D" parent="Win Logic" unique_id=252823045]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Logic/check12" unique_id=1642765659]
+shape = SubResource("SegmentShape2D_4d4fs")
+
+[node name="check13" type="Area2D" parent="Win Logic" unique_id=330926978]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Logic/check13" unique_id=1105139236]
+shape = SubResource("SegmentShape2D_ofs71")
+
+[node name="check14" type="Area2D" parent="Win Logic" unique_id=1335786422]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Logic/check14" unique_id=336827761]
+shape = SubResource("SegmentShape2D_jcbkm")
+
+[node name="Checkpoint" type="Sprite2D" parent="." unique_id=552114493]
+z_index = 1
+position = Vector2(661.5, 231.5)
+scale = Vector2(6.15625, 7.59375)
+texture = ExtResource("2_l2glk")
+
+[node name="Track1" type="Sprite2D" parent="." unique_id=987579108]
+position = Vector2(3011.0002, 1188.0001)
+scale = Vector2(16.345053, 16.345053)
+texture = ExtResource("1_aahq8")
+
+[node name="player" parent="." unique_id=1519398841 instance=ExtResource("2_8q000")]
+position = Vector2(253, 237)
+
+[node name="Grass" parent="." unique_id=12853458 instance=ExtResource("3_8q000")]
+visible = false
+position = Vector2(3011.0002, 1188.0001)
+scale = Vector2(16.345053, 16.345053)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Grass" unique_id=900385654]
+polygon = PackedVector2Array(-158.82483, -51.819973, -154.17511, -51.881153, -154.17511, -51.085808, -126.032036, -50.963448, -123.82954, -49.37275, -118.13974, -50.779903, -106.087166, -50.65754, -106.087166, -49.37275, -99.6632, -50.779903, -77.577, -50.779903, -72.315475, -50.29046, -67.97165, -50.963448, -36.035385, -49.862194, -21.841476, -51.146988, 18.965973, -50.963448, 34.016403, -68.21637, 49.923355, -76.781654, 59.71225, -76.842834, 77.88287, -65.64679, 96.910065, -51.51407, 101.92685, -32.05864, 107.06604, -16.029324, 115.0195, 0.6117935, 96.84888, 25.512299, 89.62955, 38.17668, 84.97983, 25.022858, 85.95874, 12.786736, 83.266785, 4.649719, 68.76698, 5.2003403, 52.615295, 8.198189, 23.982788, 14.866875, 4.0378876, 19.516602, -7.953491, 36.76953, -17.925919, 6.9133987, -21.046143, -12.970295, -20.801407, -28.99961, -24.349884, -34.138783, -41.54164, -34.322323, -58.916924, -28.75489, -80.14659, -18.782452, -82.59381, -14.989254, -89.20132, -15.845783, -115.93724, -23.615719, -128.41808, -30.16204, -142.06136, -29.85614, -142.30608, -16.335228, -123.70717, 2.6919403, -114.4689, 16.335213, -101.31508, 27.164177, -77.760544, 43.438217, -61.058243, 53.533012, -73.96735, 52.064674, -85.22458, 51.697594, -103.39522, 58.366272, -123.58481, 68.950516, -133.55725, 39.7062, -143.22379, 12.052567, -150.32074, -13.276199, -154.97046, -36.402462)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Grass" unique_id=1854647604]
+polygon = PackedVector2Array(-19.333084, 56.65323, -34.811768, 12.603195, -35.913025, 0.5506134, -36.402466, -16.518768, -61.853592, -7.647583, -73.416725, 1.4683228, -104.92473, -1.7742462, -99.9691, 2.8754807, -56.408516, 34.383484)
+
+[node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Grass" unique_id=1719567025]
+polygon = PackedVector2Array(-191.86235, -95.99236, 191.86234, -96.05354, 191.98471, 96.05353, -192.0459, 95.99234, -191.98471, -95.74764, -177.05666, -66.01387, -177.11783, -52.248238, -175.22124, -50.718723, -174.97652, -45.028927, -173.99762, -44.967747, -171.85631, -33.03753, -167.94075, -16.641132, -166.22769, -5.4450836, -162.92393, 5.3838806, -162.00623, 12.419655, -159.00838, 21.29084, -156.19408, 28.816048, -153.80803, 35.974182, -151.0549, 45.946617, -146.9558, 55.919052, -143.95795, 65.83031, -141.08246, 74.82385, -136.98337, 87.18234, -136.06566, 88.71185, -121.25995, 88.95657, -80.14659, 68.093994, -57.142685, 72.43782, -27.959549, 78.31116, -9.850082, 77.8217, -9.115921, 62.95482, -2.8755035, 61.180588, 13.031464, 41.78634, 20.250763, 33.221054, 33.832855, 29.978485, 69.92941, 22.02501, 69.868225, 35.056473, 70.541214, 42.642868, 83.2056, 64.973785, 98.990204, 64.973785, 101.98804, 51.514053, 118.93506, 29.244316, 136.861, 2.9366608, 136.98334, -11.807865, 130.1311, -12.970295, 119.66922, -33.710518, 112.082855, -59.895813, 111.042755, -65.03498, 92.74979, -79.4736, 70.541214, -91.954445, 66.013855, -92.872154, 41.96988, -93.055695, 36.830704, -91.832085, 20.923752, -83.14444, 6.118042, -66.19741, -0.6118164, -66.19741, -2.0189667, -64.85144, -107.61668, -65.03498, -108.228485, -66.07505, -115.32543, -66.19741, -116.18196, -65.09616, -136.92218, -65.03498, -136.92218, -66.25859, -147.81233, -66.07505, -149.4642, -68.15519, -159.98727, -67.84929, -162.00623, -66.25859, -176.75075, -66.13623)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=754352163]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=345355324]
+polygon = PackedVector2Array(2255, 1094, 2421, 1666, 2468, 1834, 1979, 1503, 1722, 1349, 1719, 1318)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1520634012]
+position = Vector2(0, 1)
+shape = SubResource("SegmentShape2D_7a2mg")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1981482921]
+shape = SubResource("SegmentShape2D_k0yrt")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1419325435]
+shape = SubResource("SegmentShape2D_2r280")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1573403508]
+shape = SubResource("SegmentShape2D_4wgyl")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1115321230]
+shape = SubResource("SegmentShape2D_l33ue")
+
+[node name="Boxes" type="Node" parent="." unique_id=101243295]
+
+[node name="Box" parent="Boxes" unique_id=82936517 instance=ExtResource("4_ecvur")]
+position = Vector2(1735, 188)
+
+[node name="Box2" parent="Boxes" unique_id=2006058072 instance=ExtResource("4_ecvur")]
+position = Vector2(1780, 288)
+
+[node name="Box3" parent="Boxes" unique_id=981768684 instance=ExtResource("4_ecvur")]
+position = Vector2(2922, 2249)
+
+[node name="Box4" parent="Boxes" unique_id=1263046601 instance=ExtResource("4_ecvur")]
+position = Vector2(2652, 2070)
+
+[node name="Box5" parent="Boxes" unique_id=1297860345 instance=ExtResource("4_ecvur")]
+position = Vector2(4222, 1218)
+
+[node name="Box6" parent="Boxes" unique_id=2102739733 instance=ExtResource("4_ecvur")]
+position = Vector2(4321, 1218)
+
+[connection signal="body_entered" from="Win Logic/check1" to="Win Logic" method="_on_check_1_body_entered"]
+[connection signal="body_entered" from="Win Logic/check2" to="Win Logic" method="_on_check_2_body_entered"]
