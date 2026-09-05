@@ -3,7 +3,6 @@ var check1 = false
 var check2 = false
 var check3 = false
 var check4 = false
-@onready var label: Label = $"../player/Label"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

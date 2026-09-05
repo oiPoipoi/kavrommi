@@ -5,6 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://c6b5elx16tgah" path="res://Scenes/box.tscn" id="3_bcua6"]
 [ext_resource type="Script" uid="uid://dc0lut08hjivk" path="res://Scripts/win_test.gd" id="4_l5ksx"]
 [ext_resource type="Texture2D" uid="uid://ci8kwkovecbnx" path="res://Art/checkpoint.png" id="5_xoefw"]
+[ext_resource type="PackedScene" uid="uid://ctpr5ticr61va" path="res://Scenes/grass.tscn" id="6_bcua6"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_sbur7"]
 a = Vector2(725, 858)
@@ -91,6 +92,8 @@ position = Vector2(511, 451)
 collision_layer = 3
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1636970657]
+collision_layer = 2
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2023415048]
 shape = SubResource("SegmentShape2D_ejki1")
@@ -122,6 +125,14 @@ scale = Vector2(0.99999994, 0.99999994)
 [node name="RigidBody2D4" parent="Boxes" unique_id=2075863395 instance=ExtResource("3_bcua6")]
 position = Vector2(2067, 5.999939)
 rotation = 0.35123578
+
+[node name="Grass" parent="." unique_id=12853458 instance=ExtResource("6_bcua6")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Grass" unique_id=471821104]
+polygon = PackedVector2Array(0, 1, -29, 45, 135, 135, 410, 215, 664, 244, 823, 244, 1268, 164, 1479, 62, 1560, -5, 1619, -90, 1642, -178, 1617, -281, 1558, -366, 1428, -461, 1282, -528, 1078, -580, 832, -609, 645, -607, 417, -583, 184, -524, 0, -429, -105, -333, -153, -229, -153, -130, -60, 15, -32, 38)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Grass" unique_id=1506490005]
+polygon = PackedVector2Array(-1340, 879, 2910, 891, 2889, -1218, -1387, -1192, -1345, 857, -605, 304, -751, 167, -861, -26, -881, -145, -859, -287, -781, -431, -673, -555, -531, -660, -379, -740, -223, -811, -88, -856, 79, -901, 276, -936, 467, -962, 674, -974, 877, -973, 1230, -941, 1482, -893, 1718, -821, 1948, -724, 2159, -589, 2303, -451, 2393, -271, 2411, -180, 2408, -102, 2353, 55, 2272, 175, 2145, 293, 2003, 387, 1831, 472, 1690, 524, 1420, 597, 1176, 639, 959, 663, 847, 664, 651, 664, 350, 637, 73, 591, -229, 499, -419, 413, -583, 314, -597, 305, -1342, 863)
 
 [connection signal="body_entered" from="Win Test/Area2D" to="Win Test" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="Win Test/Area2D" to="Win Test" method="_on_area_2d_body_entered_2"]

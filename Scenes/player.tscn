@@ -7,6 +7,7 @@
 size = Vector2(58, 57)
 
 [node name="player" type="CharacterBody2D" unique_id=1519398841]
+collision_mask = 3
 motion_mode = 1
 script = ExtResource("1_onrkg")
 max_speed = 1500.0
@@ -25,3 +26,4 @@ texture = ExtResource("2_onrkg")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1781407200]
 position = Vector2(8, -11)
 position_smoothing_enabled = true
+position_smoothing_speed = 10.0
