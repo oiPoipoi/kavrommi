@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://c5bbpqafuyy08"]
 
-[ext_resource type="Script" uid="uid://dc0lut08hjivk" path="res://Scripts/Win Scripts/win_test.gd" id="1_ekmfy"]
-[ext_resource type="Texture2D" uid="uid://ci8kwkovecbnx" path="res://Art/checkpoint.png" id="2_l1x86"]
-[ext_resource type="Texture2D" uid="uid://bkbdlgf4hm0xq" path="res://Art/Tracks/track.png" id="3_3krjw"]
-[ext_resource type="PackedScene" uid="uid://dhatyfpdc8mwm" path="res://Scenes/player.tscn" id="4_kucro"]
-[ext_resource type="PackedScene" uid="uid://c6b5elx16tgah" path="res://Scenes/box.tscn" id="5_5rcwd"]
-[ext_resource type="PackedScene" uid="uid://ctpr5ticr61va" path="res://Scenes/grass.tscn" id="6_rqnxs"]
+[ext_resource type="Script" uid="uid://dc0lut08hjivk" path="res://Scripts/Win Scripts/win_test.gd" id="1_vgacd"]
+[ext_resource type="Texture2D" uid="uid://ci8kwkovecbnx" path="res://Art/checkpoint.png" id="2_yxgk0"]
+[ext_resource type="Texture2D" uid="uid://bkbdlgf4hm0xq" path="res://Art/Tracks/track.png" id="3_wjnwm"]
+[ext_resource type="PackedScene" uid="uid://dhatyfpdc8mwm" path="res://Scenes/player.tscn" id="4_e7hk2"]
+[ext_resource type="PackedScene" uid="uid://c6b5elx16tgah" path="res://Scenes/box.tscn" id="5_3onnq"]
+[ext_resource type="PackedScene" uid="uid://ctpr5ticr61va" path="res://Scenes/grass.tscn" id="6_2rtyn"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_sbur7"]
 a = Vector2(725, 858)
@@ -42,12 +42,12 @@ b = Vector2(-1333, 870)
 [node name="Track" type="Node2D" unique_id=667905707]
 
 [node name="Win Test" type="Node" parent="." unique_id=603902113]
-script = ExtResource("1_ekmfy")
+script = ExtResource("1_vgacd")
 
 [node name="Checkpoint" type="Sprite2D" parent="Win Test" unique_id=1033657120]
 position = Vector2(728.00006, 452.75)
 scale = Vector2(9.500002, 13.328124)
-texture = ExtResource("2_l1x86")
+texture = ExtResource("2_yxgk0")
 
 [node name="Area2D" type="Area2D" parent="Win Test" unique_id=1015064085]
 collision_layer = 0
@@ -85,9 +85,9 @@ color = Color(0.34901962, 0.56078434, 0.043137256, 1)
 [node name="Track" type="Sprite2D" parent="." unique_id=2101594216]
 position = Vector2(765.0001, -152.00006)
 scale = Vector2(8.193358, 3.994956)
-texture = ExtResource("3_3krjw")
+texture = ExtResource("3_wjnwm")
 
-[node name="player" parent="." unique_id=1519398841 instance=ExtResource("4_kucro")]
+[node name="player" parent="." unique_id=1519398841 instance=ExtResource("4_e7hk2")]
 position = Vector2(511, 451)
 collision_layer = 3
 
@@ -110,24 +110,24 @@ shape = SubResource("SegmentShape2D_jphpq")
 
 [node name="Boxes" type="Node" parent="." unique_id=2092564208]
 
-[node name="RigidBody2D" parent="Boxes" unique_id=82936517 instance=ExtResource("5_5rcwd")]
+[node name="RigidBody2D" parent="Boxes" unique_id=82936517 instance=ExtResource("5_3onnq")]
 position = Vector2(1023, 348)
 rotation = 0.71487916
 
-[node name="RigidBody2D2" parent="Boxes" unique_id=43338752 instance=ExtResource("5_5rcwd")]
+[node name="RigidBody2D2" parent="Boxes" unique_id=43338752 instance=ExtResource("5_3onnq")]
 position = Vector2(1036, 485)
 rotation = 0.71487916
 
-[node name="RigidBody2D3" parent="Boxes" unique_id=1937181499 instance=ExtResource("5_5rcwd")]
+[node name="RigidBody2D3" parent="Boxes" unique_id=1937181499 instance=ExtResource("5_3onnq")]
 position = Vector2(1787, -111.000046)
 rotation = 0.65958333
 scale = Vector2(0.99999994, 0.99999994)
 
-[node name="RigidBody2D4" parent="Boxes" unique_id=2075863395 instance=ExtResource("5_5rcwd")]
+[node name="RigidBody2D4" parent="Boxes" unique_id=2075863395 instance=ExtResource("5_3onnq")]
 position = Vector2(2067, 5.999939)
 rotation = 0.35123578
 
-[node name="Grass" parent="." unique_id=12853458 instance=ExtResource("6_rqnxs")]
+[node name="Grass" parent="." unique_id=12853458 instance=ExtResource("6_2rtyn")]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Grass" unique_id=471821104]
 polygon = PackedVector2Array(0, 1, -29, 45, 135, 135, 410, 215, 664, 244, 823, 244, 1268, 164, 1479, 62, 1560, -5, 1619, -90, 1642, -178, 1617, -281, 1558, -366, 1428, -461, 1282, -528, 1078, -580, 832, -609, 645, -607, 417, -583, 184, -524, 0, -429, -105, -333, -153, -229, -153, -130, -60, 15, -32, 38)

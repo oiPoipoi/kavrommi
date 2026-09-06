@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://cquqr0foequ0f"]
 
-[ext_resource type="Texture2D" uid="uid://bphgmap0gqv7q" path="res://Art/Tracks/Track1.png" id="1_aahq8"]
-[ext_resource type="Script" uid="uid://d062qbfackj4r" path="res://Scripts/Win Scripts/track1logic.gd" id="1_e4ks1"]
-[ext_resource type="PackedScene" uid="uid://dhatyfpdc8mwm" path="res://Scenes/player.tscn" id="2_8q000"]
-[ext_resource type="Texture2D" uid="uid://ci8kwkovecbnx" path="res://Art/checkpoint.png" id="2_l2glk"]
-[ext_resource type="PackedScene" uid="uid://ctpr5ticr61va" path="res://Scenes/grass.tscn" id="3_8q000"]
-[ext_resource type="PackedScene" uid="uid://c6b5elx16tgah" path="res://Scenes/box.tscn" id="4_ecvur"]
+[ext_resource type="Script" uid="uid://d062qbfackj4r" path="res://Scripts/Win Scripts/track1logic.gd" id="1_2imu2"]
+[ext_resource type="Texture2D" uid="uid://8tylnxb4x8d0" path="res://Art/background_grass.png" id="1_cmdis"]
+[ext_resource type="Texture2D" uid="uid://ci8kwkovecbnx" path="res://Art/checkpoint.png" id="2_cmdis"]
+[ext_resource type="Texture2D" uid="uid://bphgmap0gqv7q" path="res://Art/Tracks/Track1.png" id="3_8np43"]
+[ext_resource type="PackedScene" uid="uid://dhatyfpdc8mwm" path="res://Scenes/player.tscn" id="4_n8kis"]
+[ext_resource type="PackedScene" uid="uid://ctpr5ticr61va" path="res://Scenes/grass.tscn" id="5_wpg75"]
+[ext_resource type="PackedScene" uid="uid://c6b5elx16tgah" path="res://Scenes/box.tscn" id="6_3kbb6"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_8erxa"]
 a = Vector2(656, 77)
@@ -41,11 +42,11 @@ b = Vector2(2814, 2155)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_6eqy7"]
 a = Vector2(2647, 728)
-b = Vector2(2425, 904)
+b = Vector2(2273, 1092)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_x8wh0"]
 a = Vector2(1789, 1245)
-b = Vector2(1659, 932)
+b = Vector2(1608, 814)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_5aoac"]
 a = Vector2(1000, 1255)
@@ -56,7 +57,7 @@ a = Vector2(2016, 2073)
 b = Vector2(2861, 2450)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ofs71"]
-a = Vector2(1011, 2321)
+a = Vector2(1064, 2103)
 b = Vector2(809, 2569)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_jcbkm"]
@@ -65,7 +66,7 @@ b = Vector2(400, 1430)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_7a2mg"]
 a = Vector2(2688, 2120)
-b = Vector2(2847, 2201)
+b = Vector2(2846, 2217)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_k0yrt"]
 a = Vector2(6149, -381)
@@ -83,10 +84,27 @@ b = Vector2(-130, 2756)
 a = Vector2(6149, -381)
 b = Vector2(6148, 2758)
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_egr8b"]
+a = Vector2(657, 992)
+b = Vector2(527, 633)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_xxy3i"]
+a = Vector2(4450, 1711)
+b = Vector2(4547, 1319)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_qatxc"]
+a = Vector2(-166, 350)
+b = Vector2(430, 349)
+
 [node name="Node2D" type="Node2D" unique_id=686301819]
 
+[node name="BackgroundGrass" type="Sprite2D" parent="." unique_id=1991219887]
+position = Vector2(3416, 1372)
+scale = Vector2(23.364584, 23.364584)
+texture = ExtResource("1_cmdis")
+
 [node name="Win Logic" type="Node" parent="." unique_id=58911606]
-script = ExtResource("1_e4ks1")
+script = ExtResource("1_2imu2")
 
 [node name="check1" type="Area2D" parent="Win Logic" unique_id=2049638901]
 
@@ -162,17 +180,18 @@ shape = SubResource("SegmentShape2D_jcbkm")
 z_index = 1
 position = Vector2(661.5, 231.5)
 scale = Vector2(6.15625, 7.59375)
-texture = ExtResource("2_l2glk")
+texture = ExtResource("2_cmdis")
 
 [node name="Track1" type="Sprite2D" parent="." unique_id=987579108]
 position = Vector2(3011.0002, 1188.0001)
 scale = Vector2(16.345053, 16.345053)
-texture = ExtResource("1_aahq8")
+texture = ExtResource("3_8np43")
 
-[node name="player" parent="." unique_id=1519398841 instance=ExtResource("2_8q000")]
+[node name="player" parent="." unique_id=1519398841 instance=ExtResource("4_n8kis")]
 position = Vector2(253, 237)
 
-[node name="Grass" parent="." unique_id=12853458 instance=ExtResource("3_8q000")]
+[node name="Grass" parent="." unique_id=12853458 instance=ExtResource("5_wpg75")]
+visible = false
 position = Vector2(3011.0002, 1188.0001)
 scale = Vector2(16.345053, 16.345053)
 
@@ -185,47 +204,61 @@ polygon = PackedVector2Array(-19.333084, 56.65323, -34.811768, 12.603195, -35.91
 [node name="CollisionPolygon2D3" type="CollisionPolygon2D" parent="Grass" unique_id=1719567025]
 polygon = PackedVector2Array(-191.86235, -95.99236, 191.86234, -96.05354, 191.98471, 96.05353, -192.0459, 95.99234, -191.98471, -95.74764, -177.05666, -66.01387, -177.11783, -52.248238, -175.22124, -50.718723, -174.97652, -45.028927, -173.99762, -44.967747, -171.85631, -33.03753, -167.94075, -16.641132, -166.22769, -5.4450836, -162.92393, 5.3838806, -162.00623, 12.419655, -159.00838, 21.29084, -156.19408, 28.816048, -153.80803, 35.974182, -151.0549, 45.946617, -146.9558, 55.919052, -143.95795, 65.83031, -141.08246, 74.82385, -136.98337, 87.18234, -136.06566, 88.71185, -121.25995, 88.95657, -80.14659, 68.093994, -57.142685, 72.43782, -27.959549, 78.31116, -9.850082, 77.8217, -9.115921, 62.95482, -2.8755035, 61.180588, 13.031464, 41.78634, 20.250763, 33.221054, 33.832855, 29.978485, 69.92941, 22.02501, 69.868225, 35.056473, 70.541214, 42.642868, 83.2056, 64.973785, 98.990204, 64.973785, 101.98804, 51.514053, 118.93506, 29.244316, 136.861, 2.9366608, 136.98334, -11.807865, 130.1311, -12.970295, 119.66922, -33.710518, 112.082855, -59.895813, 111.042755, -65.03498, 92.74979, -79.4736, 70.541214, -91.954445, 66.013855, -92.872154, 41.96988, -93.055695, 36.830704, -91.832085, 20.923752, -83.14444, 6.118042, -66.19741, -0.6118164, -66.19741, -2.0189667, -64.85144, -107.61668, -65.03498, -108.228485, -66.07505, -115.32543, -66.19741, -116.18196, -65.09616, -136.92218, -65.03498, -136.92218, -66.25859, -147.81233, -66.07505, -149.4642, -68.15519, -159.98727, -67.84929, -162.00623, -66.25859, -176.75075, -66.13623)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=754352163]
+[node name="Collisions" type="StaticBody2D" parent="." unique_id=754352163]
 collision_layer = 2
 collision_mask = 2
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=345355324]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Collisions" unique_id=345355324]
 polygon = PackedVector2Array(2255, 1094, 2421, 1666, 2468, 1834, 1979, 1503, 1722, 1349, 1719, 1318)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1520634012]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Collisions" unique_id=1520634012]
 position = Vector2(0, 1)
 shape = SubResource("SegmentShape2D_7a2mg")
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1981482921]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Collisions" unique_id=1981482921]
 shape = SubResource("SegmentShape2D_k0yrt")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1419325435]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Collisions" unique_id=1419325435]
 shape = SubResource("SegmentShape2D_2r280")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1573403508]
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Collisions" unique_id=1573403508]
 shape = SubResource("SegmentShape2D_4wgyl")
 
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1115321230]
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="Collisions" unique_id=1115321230]
 shape = SubResource("SegmentShape2D_l33ue")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="Collisions" unique_id=566390864]
+shape = SubResource("SegmentShape2D_egr8b")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Collisions" unique_id=844591375]
+shape = SubResource("SegmentShape2D_xxy3i")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Collisions" unique_id=520875481]
+polygon = PackedVector2Array(3600, 337, 4138, 339, 3860, 28, 3846, 27)
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Collisions" unique_id=344238312]
+position = Vector2(91, -4)
+shape = SubResource("SegmentShape2D_qatxc")
+one_way_collision = true
 
 [node name="Boxes" type="Node" parent="." unique_id=101243295]
 
-[node name="Box" parent="Boxes" unique_id=82936517 instance=ExtResource("4_ecvur")]
+[node name="Box" parent="Boxes" unique_id=82936517 instance=ExtResource("6_3kbb6")]
 position = Vector2(1735, 188)
 
-[node name="Box2" parent="Boxes" unique_id=2006058072 instance=ExtResource("4_ecvur")]
-position = Vector2(1780, 288)
+[node name="Box2" parent="Boxes" unique_id=2006058072 instance=ExtResource("6_3kbb6")]
+position = Vector2(1914, 288)
 
-[node name="Box3" parent="Boxes" unique_id=981768684 instance=ExtResource("4_ecvur")]
+[node name="Box3" parent="Boxes" unique_id=981768684 instance=ExtResource("6_3kbb6")]
 position = Vector2(2922, 2249)
 
-[node name="Box4" parent="Boxes" unique_id=1263046601 instance=ExtResource("4_ecvur")]
+[node name="Box4" parent="Boxes" unique_id=1263046601 instance=ExtResource("6_3kbb6")]
 position = Vector2(2652, 2070)
 
-[node name="Box5" parent="Boxes" unique_id=1297860345 instance=ExtResource("4_ecvur")]
+[node name="Box5" parent="Boxes" unique_id=1297860345 instance=ExtResource("6_3kbb6")]
 position = Vector2(4222, 1218)
 
-[node name="Box6" parent="Boxes" unique_id=2102739733 instance=ExtResource("4_ecvur")]
+[node name="Box6" parent="Boxes" unique_id=2102739733 instance=ExtResource("6_3kbb6")]
 position = Vector2(4321, 1218)
 
 [connection signal="body_entered" from="Win Logic/check1" to="Win Logic" method="_on_check_1_body_entered"]
