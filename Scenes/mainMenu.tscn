@@ -1,0 +1,96 @@
+[gd_scene format=3 uid="uid://ctmxt3ye0ftkf"]
+
+[ext_resource type="Texture2D" uid="uid://bmijheqaciexi" path="res://Art/kavrommiLogo.png" id="1_60k44"]
+[ext_resource type="Script" uid="uid://bg0x4vrghms5j" path="res://Scripts/mainMenu.gd" id="1_b7htb"]
+[ext_resource type="FontFile" uid="uid://c3fbyac2c0juu" path="res://Other/Silkscreen-Regular.ttf" id="2_5pknu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7a2mg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b7htb"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3uny1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k0yrt"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v10og"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5pknu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l33ue"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_snj4n"]
+
+[node name="Control" type="Control" unique_id=338353906]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b7htb")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1630452514]
+layout_mode = 0
+offset_left = -23.0
+offset_top = -11.0
+offset_right = 1224.0
+offset_bottom = 681.0
+color = Color(0.556953, 0.556953, 0.556953, 1)
+
+[node name="KavrommiLogo" type="Sprite2D" parent="." unique_id=1192404060]
+position = Vector2(797.00006, 171.00005)
+scale = Vector2(5.328125, 5.328125)
+texture = ExtResource("1_60k44")
+
+[node name="Start" type="Button" parent="." unique_id=815850684]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 502.0
+offset_right = 344.0
+offset_bottom = 623.0
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("2_5pknu")
+theme_override_font_sizes/font_size = 88
+theme_override_styles/normal = SubResource("StyleBoxEmpty_7a2mg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_b7htb")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3uny1")
+text = "Start"
+
+[node name="___" type="Button" parent="." unique_id=239798765]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 354.0
+offset_right = 344.0
+offset_bottom = 475.0
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("2_5pknu")
+theme_override_font_sizes/font_size = 88
+theme_override_styles/normal = SubResource("StyleBoxEmpty_k0yrt")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_v10og")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5pknu")
+text = "..."
+
+[node name="Exit" type="Button" parent="." unique_id=250894916]
+layout_mode = 0
+offset_left = 1048.0
+offset_top = 583.0
+offset_right = 1134.0
+offset_bottom = 631.0
+theme_override_colors/font_color = Color(0.99607843, 0.3137255, 0.3137255, 1)
+theme_override_constants/outline_size = 9
+theme_override_fonts/font = ExtResource("2_5pknu")
+theme_override_font_sizes/font_size = 31
+theme_override_styles/normal = SubResource("StyleBoxEmpty_l33ue")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_snj4n")
+text = "Exit"
+
+[node name="Version" type="Label" parent="." unique_id=645947622]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("2_5pknu")
+theme_override_font_sizes/font_size = 19
+text = "Ver. 0.1.1"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

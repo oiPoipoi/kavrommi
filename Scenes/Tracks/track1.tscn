@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cquqr0foequ0f"]
 
-[ext_resource type="Texture2D" uid="uid://bphgmap0gqv7q" path="res://Art/Track1.png" id="1_aahq8"]
-[ext_resource type="Script" uid="uid://d062qbfackj4r" path="res://Scripts/track1logic.gd" id="1_e4ks1"]
+[ext_resource type="Texture2D" uid="uid://bphgmap0gqv7q" path="res://Art/Tracks/Track1.png" id="1_aahq8"]
+[ext_resource type="Script" uid="uid://d062qbfackj4r" path="res://Scripts/Win Scripts/track1logic.gd" id="1_e4ks1"]
 [ext_resource type="PackedScene" uid="uid://dhatyfpdc8mwm" path="res://Scenes/player.tscn" id="2_8q000"]
 [ext_resource type="Texture2D" uid="uid://ci8kwkovecbnx" path="res://Art/checkpoint.png" id="2_l2glk"]
 [ext_resource type="PackedScene" uid="uid://ctpr5ticr61va" path="res://Scenes/grass.tscn" id="3_8q000"]

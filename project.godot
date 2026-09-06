@@ -18,6 +18,17 @@ config/name="kavrommi"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://Art/icon.svg"
 
+[file_customization]
+
+folder_colors={
+"res://Art/": "red",
+"res://Art/Tracks/": "gray",
+"res://Other/": "orange",
+"res://Scenes/": "yellow",
+"res://Scripts/": "green",
+"res://Scripts/Win Scripts/": "gray"
+}
+
 [input]
 
 w={
