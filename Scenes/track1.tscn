@@ -32,11 +32,11 @@ a = Vector2(4484, 1667)
 b = Vector2(4508, 2316)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_lk3f1"]
-a = Vector2(4391, 1288)
+a = Vector2(4460, 1225)
 b = Vector2(4128, 1560)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_s6et1"]
-a = Vector2(2864, 1783)
+a = Vector2(2911, 1508)
 b = Vector2(2814, 2155)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_6eqy7"]
@@ -173,7 +173,6 @@ texture = ExtResource("1_aahq8")
 position = Vector2(253, 237)
 
 [node name="Grass" parent="." unique_id=12853458 instance=ExtResource("3_8q000")]
-visible = false
 position = Vector2(3011.0002, 1188.0001)
 scale = Vector2(16.345053, 16.345053)
 
@@ -230,4 +229,17 @@ position = Vector2(4222, 1218)
 position = Vector2(4321, 1218)
 
 [connection signal="body_entered" from="Win Logic/check1" to="Win Logic" method="_on_check_1_body_entered"]
+[connection signal="body_exited" from="Win Logic/check1" to="Win Logic" method="_on_check_1_body_exited"]
 [connection signal="body_entered" from="Win Logic/check2" to="Win Logic" method="_on_check_2_body_entered"]
+[connection signal="body_entered" from="Win Logic/check3" to="Win Logic" method="_on_check_3_body_entered"]
+[connection signal="body_entered" from="Win Logic/check4" to="Win Logic" method="_on_check_4_body_entered"]
+[connection signal="body_entered" from="Win Logic/check5" to="Win Logic" method="_on_check_5_body_entered"]
+[connection signal="body_entered" from="Win Logic/check6" to="Win Logic" method="_on_check_6_body_entered"]
+[connection signal="body_entered" from="Win Logic/check7" to="Win Logic" method="_on_check_7_body_entered"]
+[connection signal="body_entered" from="Win Logic/check8" to="Win Logic" method="_on_check_8_body_entered"]
+[connection signal="body_entered" from="Win Logic/check9" to="Win Logic" method="_on_check_9_body_entered"]
+[connection signal="body_entered" from="Win Logic/check10" to="Win Logic" method="_on_check_10_body_entered"]
+[connection signal="body_entered" from="Win Logic/check11" to="Win Logic" method="_on_check_11_body_entered"]
+[connection signal="body_entered" from="Win Logic/check12" to="Win Logic" method="_on_check_12_body_entered"]
+[connection signal="body_entered" from="Win Logic/check13" to="Win Logic" method="_on_check_13_body_entered"]
+[connection signal="body_entered" from="Win Logic/check14" to="Win Logic" method="_on_check_14_body_entered"]
