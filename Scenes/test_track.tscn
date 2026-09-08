@@ -1,0 +1,143 @@
+[gd_scene format=3 uid="uid://c5bbpqafuyy08"]
+
+[ext_resource type="Script" uid="uid://dc0lut08hjivk" path="res://Scripts/win_test.gd" id="1_ekmfy"]
+[ext_resource type="Texture2D" uid="uid://ci8kwkovecbnx" path="res://Art/checkpoint.png" id="2_l1x86"]
+[ext_resource type="Texture2D" uid="uid://bkbdlgf4hm0xq" path="res://Art/track.png" id="3_3krjw"]
+[ext_resource type="PackedScene" uid="uid://dhatyfpdc8mwm" path="res://Scenes/player.tscn" id="4_kucro"]
+[ext_resource type="PackedScene" uid="uid://c6b5elx16tgah" path="res://Scenes/box.tscn" id="5_5rcwd"]
+[ext_resource type="PackedScene" uid="uid://ctpr5ticr61va" path="res://Scenes/grass.tscn" id="6_rqnxs"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_sbur7"]
+a = Vector2(725, 858)
+b = Vector2(728, 140)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_4op3a"]
+a = Vector2(2860, -134)
+b = Vector2(1379, -134)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_0177n"]
+a = Vector2(728, -457)
+b = Vector2(718, -1213)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_y0wkg"]
+a = Vector2(-85, -185)
+b = Vector2(-1506, -201)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ejki1"]
+a = Vector2(-1332, -1175)
+b = Vector2(-1332, 870)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_iqkd1"]
+a = Vector2(-1332, -1174)
+b = Vector2(2863, -1174)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_eeo6d"]
+a = Vector2(2863, 871)
+b = Vector2(2862, -1174)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_jphpq"]
+a = Vector2(2863, 871)
+b = Vector2(-1333, 870)
+
+[node name="Track" type="Node2D" unique_id=667905707]
+
+[node name="Win Test" type="Node" parent="." unique_id=603902113]
+script = ExtResource("1_ekmfy")
+
+[node name="Checkpoint" type="Sprite2D" parent="Win Test" unique_id=1033657120]
+position = Vector2(728.00006, 452.75)
+scale = Vector2(9.500002, 13.328124)
+texture = ExtResource("2_l1x86")
+
+[node name="Area2D" type="Area2D" parent="Win Test" unique_id=1015064085]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D" unique_id=1961551999]
+shape = SubResource("SegmentShape2D_sbur7")
+
+[node name="Area2D2" type="Area2D" parent="Win Test" unique_id=1550372515]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D2" unique_id=725097533]
+shape = SubResource("SegmentShape2D_4op3a")
+
+[node name="Area2D3" type="Area2D" parent="Win Test" unique_id=491245794]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D3" unique_id=679354621]
+shape = SubResource("SegmentShape2D_0177n")
+
+[node name="Area2D4" type="Area2D" parent="Win Test" unique_id=195353625]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Win Test/Area2D4" unique_id=2071262250]
+shape = SubResource("SegmentShape2D_y0wkg")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=599342646]
+offset_left = -2260.0
+offset_top = -2072.0
+offset_right = 4331.0
+offset_bottom = 2038.0
+color = Color(0.34901962, 0.56078434, 0.043137256, 1)
+
+[node name="Track" type="Sprite2D" parent="." unique_id=2101594216]
+position = Vector2(765.0001, -152.00006)
+scale = Vector2(8.193358, 3.994956)
+texture = ExtResource("3_3krjw")
+
+[node name="player" parent="." unique_id=1519398841 instance=ExtResource("4_kucro")]
+position = Vector2(511, 451)
+collision_layer = 3
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1636970657]
+position = Vector2(1, 0)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2023415048]
+shape = SubResource("SegmentShape2D_ejki1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=2126532892]
+shape = SubResource("SegmentShape2D_iqkd1")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=91706378]
+shape = SubResource("SegmentShape2D_eeo6d")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1692668091]
+shape = SubResource("SegmentShape2D_jphpq")
+
+[node name="Boxes" type="Node" parent="." unique_id=2092564208]
+
+[node name="RigidBody2D" parent="Boxes" unique_id=82936517 instance=ExtResource("5_5rcwd")]
+position = Vector2(1023, 348)
+rotation = 0.71487916
+
+[node name="RigidBody2D2" parent="Boxes" unique_id=43338752 instance=ExtResource("5_5rcwd")]
+position = Vector2(1036, 485)
+rotation = 0.71487916
+
+[node name="RigidBody2D3" parent="Boxes" unique_id=1937181499 instance=ExtResource("5_5rcwd")]
+position = Vector2(1787, -111.000046)
+rotation = 0.65958333
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="RigidBody2D4" parent="Boxes" unique_id=2075863395 instance=ExtResource("5_5rcwd")]
+position = Vector2(2067, 5.999939)
+rotation = 0.35123578
+
+[node name="Grass" parent="." unique_id=12853458 instance=ExtResource("6_rqnxs")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Grass" unique_id=471821104]
+polygon = PackedVector2Array(0, 1, -29, 45, 135, 135, 410, 215, 664, 244, 823, 244, 1268, 164, 1479, 62, 1560, -5, 1619, -90, 1642, -178, 1617, -281, 1558, -366, 1428, -461, 1282, -528, 1078, -580, 832, -609, 645, -607, 417, -583, 184, -524, 0, -429, -105, -333, -153, -229, -153, -130, -60, 15, -32, 38)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Grass" unique_id=1506490005]
+polygon = PackedVector2Array(-1340, 879, 2910, 891, 2889, -1218, -1387, -1192, -1345, 857, -605, 304, -751, 167, -861, -26, -881, -145, -859, -287, -781, -431, -673, -555, -531, -660, -379, -740, -223, -811, -88, -856, 79, -901, 276, -936, 467, -962, 674, -974, 877, -973, 1230, -941, 1482, -893, 1718, -821, 1948, -724, 2159, -589, 2303, -451, 2393, -271, 2411, -180, 2408, -102, 2353, 55, 2272, 175, 2145, 293, 2003, 387, 1831, 472, 1690, 524, 1420, 597, 1176, 639, 959, 663, 847, 664, 651, 664, 350, 637, 73, 591, -229, 499, -419, 413, -583, 314, -597, 305, -1342, 863)
+
+[connection signal="body_entered" from="Win Test/Area2D" to="Win Test" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="Win Test/Area2D" to="Win Test" method="_on_area_2d_body_entered_2"]
+[connection signal="body_exited" from="Win Test/Area2D" to="Win Test" method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="Win Test/Area2D2" to="Win Test" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="Win Test/Area2D3" to="Win Test" method="_on_area_2d_3_body_entered"]
+[connection signal="body_entered" from="Win Test/Area2D4" to="Win Test" method="_on_area_2d_4_body_entered"]

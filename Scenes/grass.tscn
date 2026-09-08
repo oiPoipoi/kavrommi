@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://ctpr5ticr61va"]
+
+[ext_resource type="Script" uid="uid://cusfnjo3maw8b" path="res://Scripts/grass.gd" id="1_ewrq5"]
+
+[node name="Grass" type="Area2D" unique_id=12853458]
+script = ExtResource("1_ewrq5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

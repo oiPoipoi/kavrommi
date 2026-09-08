@@ -21,3 +21,7 @@ func _physics_process(delta: float) -> void:
 		
 		if collider is RigidBody2D:
 			collider.apply_central_impulse(-collision.get_normal() * push_force)
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	pass # Replace with function body.
