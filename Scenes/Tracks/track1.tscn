@@ -191,7 +191,6 @@ texture = ExtResource("3_8np43")
 position = Vector2(253, 237)
 
 [node name="Grass" parent="." unique_id=12853458 instance=ExtResource("5_wpg75")]
-visible = false
 position = Vector2(3011.0002, 1188.0001)
 scale = Vector2(16.345053, 16.345053)
 
