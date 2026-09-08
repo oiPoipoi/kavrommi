@@ -115,4 +115,4 @@ func _on_check_1_body_entered(body: Node2D) -> void:
 	print("called1exit")
 	if check14 == true:
 		print("if1exit")
-		get_tree().change_scene_to_file("res://Scenes/test_track.tscn")
+		get_tree().change_scene_to_file("res://Scenes/Tracks/test_track.tscn")

@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dhatyfpdc8mwm" path="res://Scenes/player.tscn" id="2_6whob"]
 [ext_resource type="PackedScene" uid="uid://c6b5elx16tgah" path="res://Scenes/box.tscn" id="3_u7krg"]
 
-[node name="Node2D" type="Node2D" unique_id=149384163]
+[node name="Node2D2" type="Node2D" unique_id=149384163]
 
 [node name="Icon2" type="Sprite2D" parent="." unique_id=1164025422]
 position = Vector2(937, 273)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bphgmap0gqv7q"
-path="res://.godot/imported/Track1.png-7a402c4bb72142dfff7c0e9568f95caf.ctex"
+uid="uid://bmijheqaciexi"
+path="res://.godot/imported/kavrommiLogo.png-f36b01cb614a59958c3964fe469e7217.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Track1.png"
-dest_files=["res://.godot/imported/Track1.png-7a402c4bb72142dfff7c0e9568f95caf.ctex"]
+source_file="res://Art/kavrommiLogo.png"
+dest_files=["res://.godot/imported/kavrommiLogo.png-f36b01cb614a59958c3964fe469e7217.ctex"]
 
 [params]
 
