@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cisgwh5uyks7y"]
+
+[ext_resource type="Texture2D" uid="uid://743oqim0hqnn" path="res://Art/Tracks/test track 1.png" id="1_fuhyv"]
+[ext_resource type="PackedScene" uid="uid://dhatyfpdc8mwm" path="res://Scenes/player.tscn" id="2_hw75h"]
+
+[node name="Node2D" type="Node2D" unique_id=2038435682]
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1269221545]
+offset_left = -1446.0
+offset_top = -1213.0
+offset_right = 13040.0
+offset_bottom = 7617.0
+color = Color(0.36862746, 0.6509804, 0.17254902, 1)
+
+[node name="TestTrack1" type="Sprite2D" parent="." unique_id=2062721685]
+position = Vector2(5314.1504, 2958.1873)
+scale = Vector2(37.292812, 38.788124)
+texture = ExtResource("1_fuhyv")
+
+[node name="player" parent="." unique_id=1519398841 instance=ExtResource("2_hw75h")]
+position = Vector2(496, 925)
